@@ -1,0 +1,133 @@
+/* CSS untuk tampilan mirip Telegram */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #666666;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+/* Media query untuk layar kecil (ponsel) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Media query untuk layar besar (desktop) */
+@media (min-width: 1200px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 100vh;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #0F0F0F;
+    color: #fff;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 15px;
+}
+
+.sidebar li:hover {
+    background-color: #6e6e6e3d;
+    margin-left: 3px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.chat {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    background-color: #0F0F0F;
+    color: #fff;
+    padding: 10px;
+}
+
+.chat-messages {
+    display: flex;
+    flex-direction: column; /* Menyusun pesan secara vertikal */
+    max-height: 100vh; /* Atur tinggi maksimum sesuai kebutuhan */
+    overflow-y: scroll;
+    border: 1px solid #000000;
+    padding: 10px;
+    background-color: #333333;
+    align-items: flex-start;
+}
+
+.chat-input {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ccc;
+}
+
+.chat-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.chat-input button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Style untuk pesan dari pengguna dan teman */
+.message {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.user-message {
+    align-self: flex-end; /* Pesan pengguna ke kanan */
+    background-color: #e6f7ff;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px 10px 5px 0; /* Margin kanan untuk pesan pengguna */
+    max-width: 70%; /* Batas lebar maksimum untuk bubble chat user */
+    word-wrap: break-word; /* Untuk memecah kata jika teks terlalu panjang */
+}
+
+.friend-message {
+    align-self: flex-start; /* Pesan teman ke kiri */
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px 0 5px 10px; /* Margin kiri untuk pesan teman */
+    max-width: 70%; /* Batas lebar maksimum untuk bubble chat friend */
+    word-wrap: break-word;
+}
